@@ -28,7 +28,12 @@ for i in range(N-1):
         count = 1
     else:
         count += 1
-if freq[0] == count:
+
+if count > freq[0]:
+    freq[0] = count
+    freq[1] = [arr[len(arr) - 1]]
+
+elif freq[0] == count:
     freq[1].append(arr[len(arr)-1])
 
 if len(freq[1]) > 1:
